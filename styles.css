@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    max-width: 1100px;
+    margin: 3rem auto;
+    width: 90vw;
+    display: flex;
+ 
+}
+.panel{
+    width: 100%;
+    position: relative;
+    border-radius: 2rem;
+    height: 80vh;
+    flex: 0.5;
+    transition: flex 0.5s ease-in-out;
+ 
+}
+
+.panel:nth-of-type(1){
+    background: url(images/wildlife1.jpg) no-repeat center center/cover;
+}
+
+.panel:nth-of-type(2){
+    background: url(images/wildlife2.jpg) no-repeat center center/cover;
+}
+.panel:nth-of-type(3){
+    background: url(images/wildlife3.jpg) no-repeat center center/cover;
+}
+.panel:nth-of-type(4){
+    background: url(images/wildlife4.jpg) no-repeat center center/cover;
+}
+.panel:nth-of-type(5){
+    background: url(images/wildlife5.jpg) no-repeat center center/cover;
+}
+.panel:nth-of-type(6){
+    background: url(images/wildlife6.jpg) no-repeat center center/cover;
+}
+
+.panel:nth-of-type(7){
+    background: url(images/wildlifeMain.jpg) no-repeat center center/cover;
+}
+
+.panel h3{
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    color: #fff;
+    font-size: 1.5rem;
+    opacity: 0;
+}
+
+.panel.active{
+    flex: 5;
+}
+
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out 0.4s;
+}
+
+
+@media screen and (max-width: 760px){
+    .panel:nth-of-type(6),
+    .panel:nth-of-type(7){
+        display: none;
+    }
+    
+}
